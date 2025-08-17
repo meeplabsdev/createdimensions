@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "createdimensions:dimensional_nugget"
+    }
+  ],
+  "results": [
+    {
+      "item": "createdimensions:dimensional_rod"
+    }
+  ]
+}

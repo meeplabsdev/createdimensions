@@ -1,0 +1,16 @@
+{
+  "type": "create:item_application",
+  "ingredients": [
+    {
+      "tag": "minecraft:logs"
+    },
+    {
+      "item": "createdimensions:dimensional_ingot"
+    }
+  ],
+  "results": [
+    {
+    "item": "createdimensions:dimensional_casing"
+    }
+  ]
+}

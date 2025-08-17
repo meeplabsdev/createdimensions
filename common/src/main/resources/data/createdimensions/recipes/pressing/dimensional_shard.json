@@ -1,0 +1,14 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "createdimensions:dimensional_sheet"
+    }
+  ],
+  "results": [
+    {
+      "item": "createdimensions:dimensional_shard",
+      "count": 2
+    }
+  ]
+}

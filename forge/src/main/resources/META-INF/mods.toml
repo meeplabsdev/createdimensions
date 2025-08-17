@@ -1,0 +1,42 @@
+modLoader = "javafml"
+loaderVersion = "[47,)"
+issueTrackerURL = "https://github.com/meeplabsdev/createdimensions/issues"
+license = "LGPL-3.0"
+
+[[mods]]
+modId = "createdimensions"
+version = "${version}"
+displayName = "Create: Dimensions"
+authors = "CroakAndRoll, meeplabsdev"
+description = '''
+A create addon for pocket dimensions
+'''
+logoFile = "icon.png"
+
+[[dependencies.createdimensions]]
+modId = "forge"
+mandatory = true
+versionRange = "[47,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.createdimensions]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.20.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.createdimensions]]
+modId = "architectury"
+mandatory = true
+versionRange = "[9.2.14,)"
+ordering = "AFTER"
+side = "BOTH"
+
+#[[dependencies.createdimensions]]
+#modId = "create"
+#mandatory = true
+#versionRange = "[6.0.0,)"
+#ordering = "AFTER"
+#side = "BOTH"

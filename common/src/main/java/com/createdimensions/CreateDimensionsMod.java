@@ -20,6 +20,7 @@ public final class CreateDimensionsMod {
 	public static void onInitialize() {
 		ModEffects.register();
 		ModBlocks.register();
+		ModBlockEntities.register();
 		ModItems.register();
 		ModTabs.register();
 

@@ -24,11 +24,25 @@ subprojects {
     }
 
     repositories {
-        // Add repositories to retrieve artifacts from in here.
-        // You should only use this when depending on other mods because
-        // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-        // See https://docs.gradle.org/current/userguide/declaring_repositories.html
-        // for more information about repositories.
+        maven { url = "https://mvn.devos.one/releases" } // Porting Lib releases
+        maven { url = "https://mvn.devos.one/snapshots" } // Create and several dependencies
+        maven { url = "https://maven.tterrag.com/" } // Flywheel
+        maven { url = "https://modmaven.dev/" } // ModMaven
+        maven { url = "https://maven.jamieswhiteshirt.com/libs-release" } // Reach Entity Attributes
+        maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven" } // Forge Config API Port
+
+        maven { // Fabric ASM for Porting Lib
+            url = "https://jitpack.io/"
+            content { includeGroupAndSubgroups("com.github") }
+        }
+
+        maven { url = "https://maven.shedaniel.me" } // Cloth Config, REI
+        maven { url = "https://maven.blamejared.com" } // JEI
+
+        maven { url = "https://maven.terraformersmc.com/releases" } // Mod Menu, EMI
+
+        maven { url = "https://maven.createmod.net" } // Create, Ponder, Flywheel
+        maven { url = "https://maven.ithundxr.dev/mirror" } // Registrate
     }
 
     dependencies {

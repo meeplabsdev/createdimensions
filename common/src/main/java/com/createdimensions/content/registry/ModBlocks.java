@@ -1,6 +1,7 @@
 package com.createdimensions.content.registry;
 
 import com.createdimensions.CreateDimensionsMod;
+import com.createdimensions.create.CreateService;
 import dev.architectury.platform.Platform;
 import dev.architectury.registry.registries.Registrar;
 import dev.architectury.registry.registries.RegistrySupplier;
@@ -20,7 +21,8 @@ public class ModBlocks {
 
 	public static RegistrySupplier<Block>
 		DIMENSIONAL_CASING,
-		DIMENSIONAL_GLASS;
+		DIMENSIONAL_GLASS,
+		TEST_KINETIC_BLOCK;
 
 	public static void register() {
 		Register REG = new Register(
@@ -30,6 +32,7 @@ public class ModBlocks {
 
 		DIMENSIONAL_CASING = REG.register("dimensional_casing");
 		DIMENSIONAL_GLASS = REG.register("dimensional_glass", Block.Settings.copy(Blocks.GLASS).nonOpaque());
+		TEST_KINETIC_BLOCK = REG.register("test_kinetic_block", CreateService.getKineticBlockClass(), Block.Settings.create());
 	}
 
 	static class Register {
@@ -49,6 +52,7 @@ public class ModBlocks {
 			return register(id, Block.class, settings);
 		}
 
+		@SuppressWarnings("UnstableApiUsage")
 		private <T extends Block> RegistrySupplier<Block> register(String id, Class<T> block, Block.Settings settings) {
 			RegistrySupplier<Block> blockRegistrySupplier = BLOCKS.register(new Identifier(CreateDimensionsMod.MOD_ID,
 					id),

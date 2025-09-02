@@ -6,8 +6,8 @@ import net.minecraft.block.BlockState;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.math.BlockPos;
 
-public class TestForgeKineticBlockEntity extends KineticBlockEntity {
-	public TestForgeKineticBlockEntity(BlockPos pos, BlockState state) {
+public class ForgeKineticBlockEntity extends KineticBlockEntity {
+	public ForgeKineticBlockEntity(BlockPos pos, BlockState state) {
 		super(ModBlockEntities.TEST_KINETIC_BLOCK_ENTITY.get(), pos, state);
 	}
 

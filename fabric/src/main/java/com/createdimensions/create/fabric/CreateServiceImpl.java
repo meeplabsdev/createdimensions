@@ -1,7 +1,7 @@
 package com.createdimensions.create.fabric;
 
-import com.createdimensions.create.fabric.blocks.TestFabricKineticBlock;
-import com.createdimensions.create.fabric.blocks.TestFabricKineticBlockEntity;
+import com.createdimensions.create.fabric.blocks.FabricKineticBlock;
+import com.createdimensions.create.fabric.blocks.FabricKineticBlockEntity;
 import com.simibubi.create.content.kinetics.base.KineticBlockEntity;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.Block;
@@ -16,11 +16,11 @@ public class CreateServiceImpl {
 	}
 
 	public static Class<? extends Block> getKineticBlockClass() {
-		return TestFabricKineticBlock.class;
+		return FabricKineticBlock.class;
 	}
 
 	public static BlockEntity createKineticBlockEntity(BlockPos pos, BlockState state) {
-		return new TestFabricKineticBlockEntity(pos, state);
+		return new FabricKineticBlockEntity(pos, state);
 	}
 
 	public static float getRotationSpeed(BlockEntity blockEntity) {

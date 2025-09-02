@@ -1,7 +1,7 @@
 package com.createdimensions.create.forge;
 
-import com.createdimensions.create.forge.blocks.TestForgeKineticBlock;
-import com.createdimensions.create.forge.blocks.TestForgeKineticBlockEntity;
+import com.createdimensions.create.forge.blocks.ForgeKineticBlock;
+import com.createdimensions.create.forge.blocks.ForgeKineticBlockEntity;
 import com.simibubi.create.content.kinetics.base.KineticBlockEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -16,11 +16,11 @@ public class CreateServiceImpl {
 	}
 
 	public static Class<? extends Block> getKineticBlockClass() {
-		return TestForgeKineticBlock.class;
+		return ForgeKineticBlock.class;
 	}
 
 	public static BlockEntity createKineticBlockEntity(BlockPos pos, BlockState state) {
-		return new TestForgeKineticBlockEntity(pos, state);
+		return new ForgeKineticBlockEntity(pos, state);
 	}
 
 	public static float getRotationSpeed(BlockEntity blockEntity) {

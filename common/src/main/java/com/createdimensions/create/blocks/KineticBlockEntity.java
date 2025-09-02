@@ -8,8 +8,8 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.util.math.BlockPos;
 import org.jetbrains.annotations.Nullable;
 
-public class TestKineticBlockEntity extends BlockWithEntity {
-	public TestKineticBlockEntity(Settings settings) {
+public class KineticBlockEntity extends BlockWithEntity {
+	public KineticBlockEntity(Settings settings) {
 		super(settings);
 	}
 

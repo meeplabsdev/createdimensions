@@ -32,7 +32,7 @@ public class ModBlocks {
 
 		DIMENSIONAL_CASING = REG.register("dimensional_casing");
 		DIMENSIONAL_GLASS = REG.register("dimensional_glass", Block.Settings.copy(Blocks.GLASS).nonOpaque());
-		TEST_KINETIC_BLOCK = REG.register("test_kinetic_block", CreateService.getKineticBlockClass(), Block.Settings.create());
+		TEST_KINETIC_BLOCK = REG.register("kinetic_block", CreateService.getKineticBlockClass(), Block.Settings.create());
 	}
 
 	static class Register {

@@ -1,4 +1,4 @@
-package com.createdimensions.create.fabric.blocks;
+package com.createdimensions.create.forge.blocks;
 
 import com.createdimensions.content.registry.ModBlockEntities;
 import com.simibubi.create.content.kinetics.base.KineticBlock;
@@ -9,8 +9,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.WorldView;
 
-public class TestFabricKineticBlock extends KineticBlock implements IBE<TestFabricKineticBlockEntity> {
-	public TestFabricKineticBlock(Settings properties) {
+public class ForgeKineticBlock extends KineticBlock implements IBE<ForgeKineticBlockEntity> {
+	public ForgeKineticBlock(Settings properties) {
 		super(properties);
 	}
 
@@ -25,14 +25,14 @@ public class TestFabricKineticBlock extends KineticBlock implements IBE<TestFabr
 	}
 
 	@Override
-	public Class<TestFabricKineticBlockEntity> getBlockEntityClass() {
-		return TestFabricKineticBlockEntity.class;
+	public Class<ForgeKineticBlockEntity> getBlockEntityClass() {
+		return ForgeKineticBlockEntity.class;
 	}
 
 	@Override
 	@SuppressWarnings("unchecked")
-	public BlockEntityType<? extends TestFabricKineticBlockEntity> getBlockEntityType() {
-		return (BlockEntityType<? extends TestFabricKineticBlockEntity>) ModBlockEntities.TEST_KINETIC_BLOCK_ENTITY.get();
+	public BlockEntityType<? extends ForgeKineticBlockEntity> getBlockEntityType() {
+		return (BlockEntityType<? extends ForgeKineticBlockEntity>) ModBlockEntities.TEST_KINETIC_BLOCK_ENTITY.get();
 	}
 
 	@Override

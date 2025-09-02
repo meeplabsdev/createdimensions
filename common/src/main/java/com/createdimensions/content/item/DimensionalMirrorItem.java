@@ -14,8 +14,8 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
-import net.minecraft.world.dimension.DimensionTypes;
 
+import java.util.Objects;
 import java.util.Set;
 
 public class DimensionalMirrorItem extends Item {
@@ -30,13 +30,18 @@ public class DimensionalMirrorItem extends Item {
 		assert server != null;
 
 		user.setVelocity(0, 0, 0);
-		if (world.getDimensionKey() == DimensionTypes.OVERWORLD) {
+		if (!Objects.equals(world.getDimensionKey().getValue().toString(), "createdimensions:pocket_dimension")) {
 			Vec3d pos = user.getPos();
 			NbtCompound position = new NbtCompound();
 			position.putDouble("x", pos.x);
 			position.putDouble("y", pos.y);
 			position.putDouble("z", pos.z);
+
+			NbtCompound origin = new NbtCompound();
+			origin.putString("id", world.getRegistryKey().getValue().toString());
+
 			user.getStackInHand(hand).setSubNbt("position", position);
+			user.getStackInHand(hand).setSubNbt("origin", origin);
 
 			ModDimensions.sendTo(server, user, RegistryKey.of(RegistryKeys.WORLD,
 				Identifier.of(CreateDimensionsMod.MOD_ID, user.getUuid().toString())));
@@ -44,11 +49,19 @@ public class DimensionalMirrorItem extends Item {
 			NbtCompound position = user.getStackInHand(hand).getSubNbt("position");
 			assert position != null;
 
+			NbtCompound origin = user.getStackInHand(hand).getSubNbt("origin");
+			assert origin != null;
+
 			double x = position.getDouble("x");
 			double y = position.getDouble("y");
 			double z = position.getDouble("z");
 
-			user.teleport(server.getWorld(World.OVERWORLD), x, y, z, Set.of(), user.getYaw(), user.getPitch());
+			String origin_world = origin.getString("id");
+			server.getWorlds().forEach(w -> {
+				if (w.getRegistryKey().getValue().toString().equals(origin_world)) {
+					user.teleport(w, x, y, z, Set.of(), user.getYaw(), user.getPitch());
+				}
+			});
 		}
 
 		user.getItemCooldownManager().set(this, 60);

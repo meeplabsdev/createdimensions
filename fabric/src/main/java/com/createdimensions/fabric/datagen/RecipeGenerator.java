@@ -118,5 +118,15 @@ public class RecipeGenerator extends FabricRecipeProvider {
 			.criterion(FabricRecipeProvider.hasItem(ModItems.DIMENSIONAL_CRYSTAL.get()), FabricRecipeProvider.conditionsFromItem(ModItems.DIMENSIONAL_CRYSTAL.get()))
 			.criterion(FabricRecipeProvider.hasItem(ModItems.DIMENSIONAL_SHARD.get()), FabricRecipeProvider.conditionsFromItem(ModItems.DIMENSIONAL_SHARD.get()))
 			.offerTo(consumer);
+
+		ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.KINETIC_BLOCK.get().asItem())
+			.input('i', ModItems.DIMENSIONAL_INGOT.get())
+			.input('g', Items.GLASS)
+			.pattern("igi")
+			.pattern("gig")
+			.pattern("igi")
+			.criterion(FabricRecipeProvider.hasItem(ModItems.DIMENSIONAL_INGOT.get()), FabricRecipeProvider.conditionsFromItem(ModItems.DIMENSIONAL_INGOT.get()))
+			.criterion(FabricRecipeProvider.hasItem(Items.GLASS), FabricRecipeProvider.conditionsFromItem(Items.GLASS))
+			.offerTo(consumer);
 	}
 }

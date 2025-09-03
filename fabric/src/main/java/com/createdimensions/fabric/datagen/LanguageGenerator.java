@@ -15,6 +15,7 @@ public class LanguageGenerator extends FabricLanguageProvider {
 		// Blocks
 		translationBuilder.add(ModBlocks.DIMENSIONAL_CASING.get(), "Noctium Casing");
 		translationBuilder.add(ModBlocks.DIMENSIONAL_GLASS.get(), "Noctium Composite");
+		translationBuilder.add(ModBlocks.KINETIC_BLOCK.get(), "Dimensional Gateway");
 
 		// Items
 		translationBuilder.add(ModItems.DIMENSIONAL_MIRROR.get(), "Mirror of Shadows");

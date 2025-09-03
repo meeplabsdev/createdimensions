@@ -32,7 +32,7 @@ public class FabricKineticBlock extends KineticBlock implements IBE<FabricKineti
 	@Override
 	@SuppressWarnings("unchecked")
 	public BlockEntityType<? extends FabricKineticBlockEntity> getBlockEntityType() {
-		return (BlockEntityType<? extends FabricKineticBlockEntity>) ModBlockEntities.TEST_KINETIC_BLOCK_ENTITY.get();
+		return (BlockEntityType<? extends FabricKineticBlockEntity>) ModBlockEntities.KINETIC_BLOCK_ENTITY.get();
 	}
 
 	@Override

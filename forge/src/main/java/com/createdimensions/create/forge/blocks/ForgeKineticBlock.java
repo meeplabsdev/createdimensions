@@ -32,7 +32,7 @@ public class ForgeKineticBlock extends KineticBlock implements IBE<ForgeKineticB
 	@Override
 	@SuppressWarnings("unchecked")
 	public BlockEntityType<? extends ForgeKineticBlockEntity> getBlockEntityType() {
-		return (BlockEntityType<? extends ForgeKineticBlockEntity>) ModBlockEntities.TEST_KINETIC_BLOCK_ENTITY.get();
+		return (BlockEntityType<? extends ForgeKineticBlockEntity>) ModBlockEntities.KINETIC_BLOCK_ENTITY.get();
 	}
 
 	@Override

@@ -8,7 +8,7 @@ import net.minecraft.util.math.BlockPos;
 
 public class FabricKineticBlockEntity extends KineticBlockEntity {
 	public FabricKineticBlockEntity(BlockPos pos, BlockState state) {
-		super(ModBlockEntities.TEST_KINETIC_BLOCK_ENTITY.get(), pos, state);
+		super(ModBlockEntities.KINETIC_BLOCK_ENTITY.get(), pos, state);
 	}
 
 	@Override

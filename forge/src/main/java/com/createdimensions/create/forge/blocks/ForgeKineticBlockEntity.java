@@ -8,7 +8,7 @@ import net.minecraft.util.math.BlockPos;
 
 public class ForgeKineticBlockEntity extends KineticBlockEntity {
 	public ForgeKineticBlockEntity(BlockPos pos, BlockState state) {
-		super(ModBlockEntities.TEST_KINETIC_BLOCK_ENTITY.get(), pos, state);
+		super(ModBlockEntities.KINETIC_BLOCK_ENTITY.get(), pos, state);
 	}
 
 	@Override

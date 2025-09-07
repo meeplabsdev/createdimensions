@@ -4,77 +4,90 @@
 A minecraft mod that adds a custom per-player, world-shared pocket dimension, which ties in very closely with the create mod ([forge](https://modrinth.com/mod/create), [fabric](https://modrinth.com/mod/create-fabric)).
 > <img width="856" height="482" alt="Pocket Dimension" src="https://github.com/user-attachments/assets/f5efdb67-fc30-4d08-bf2c-a7734fc5c6ab" />
 >
-> Pocket Dimension (Base)
+> Pocket Dimension (Initial State)
 
 ### Items (Base Materials)
 - Dimensional Scrap
   > Mined as an ore from the end dimension
   
-- Dimensional Ingot
+- Noctium Ingot
   > <img width="180" height="92" alt="Dimensional Ingot" src="https://github.com/user-attachments/assets/50a2b73e-ce9f-4e3d-a167-e1a2670f81ee" />
   >
   > Smelting / Blasting of Scrap
   
-- Dimensional Nugget
+- Noctium Chunk
   > <img width="252" height="124" alt="Dimensional Nugget" src="https://github.com/user-attachments/assets/45fc9628-737a-4cdd-8ad0-1f2a0ae19c49" />
   >
   > Crafting from Ingot
   
-- Dimensional Dust
+- Noctium Powder
   > <img width="252" height="124" alt="Dimensional Dust" src="https://github.com/user-attachments/assets/caaeb082-6a0e-4d61-9266-f999cd672c27" />
   >
-  > Crafting from Nugget
+  > Crafting from Chunk
 
-- Dimensional Rod
+- Noctium Rod
   > <img width="284" height="196" alt="Dimensional Rod" src="https://github.com/user-attachments/assets/37ba4d77-1f3c-4b74-ae6a-1ad8649d5891" />
   >
-  > Pressing of Nugget
+  > Pressing of Chunk
 
-- Dimensional Plate
+- Noctium Plate
   > <img width="284" height="196" alt="Dimensional Plate" src="https://github.com/user-attachments/assets/0e903a98-4052-47e7-9316-05496e60d837" />
   >
   > Pressing of Ingot
 
-- Dimensional Shard
+- Noctium Shard
   > <img width="284" height="196" alt="Dimensional Shard" src="https://github.com/user-attachments/assets/ba6454f7-79d4-4e4b-8554-fab44d8782c3" />
   >
   > Pressing of Plate
 
 ### Items (Ingredients)
-- Dimensional Orb
+- Infused Orb
   > <img width="252" height="124" alt="Dimensional Orb" src="https://github.com/user-attachments/assets/0ebdfffd-76a2-47f4-ab6a-ff48d75d32e5" />
   >
-  > Dust, Nugget, Ender Pearl
+  > Dust, Chunk, Ender Pearl
 
-- Dimensional Crystal
+- Noctium Crystal
   > <img width="252" height="124" alt="Dimensional Crystal" src="https://github.com/user-attachments/assets/759eb8bf-7741-4f5d-be94-e3209c98622f" />
   >
   > Shard, End Crystal
 
-- Dimensional Lens
+- Gilded Lens
   > <img width="252" height="124" alt="Dimensional Lens" src="https://github.com/user-attachments/assets/ecb35e90-e83e-473b-86be-c7271d204b9c" />
   >
-  > Glass, Nugget, Crystal, Shard
+  > Glass, Chunk, Crystal, Shard
 
 ### Items (Products)
-- Dimensional Mirror
+- Mirror of Shadows
   > <img width="252" height="124" alt="Dimensional Mirror" src="https://github.com/user-attachments/assets/5e2416fc-2cd5-46e2-875c-17d086aece1d" />
   >
   > Rod, Pearl, Lens
+  > 
+  > Can be linked to a dimensional gateway by shift + right clicking
+  > When used it transports the player between the pocket dimension and their previous dimension
+  > Only works when linked to a gateway with sufficient rotational speed
 
-- Dimensional Fruit
+- Forbidden Fruit
   > <img width="252" height="124" alt="Dimensional Fruit" src="https://github.com/user-attachments/assets/08d9b969-7797-4300-b48c-ace27dd58b38" />
   >
   > Lens, Chorus Fruit
+  >
+  > When eaten transports the player between the pocket dimension and the overworld
+  > Applies the wither effect to the player when teleporting
+  > Spawns the player within a 8192 block radius from 0,0 in the overworld
 
 
 ### Blocks
-- Dimensional Casing
+- Noctium Casing
   > <img width="284" height="176" alt="Dimensional Casing" src="https://github.com/user-attachments/assets/df600760-131e-49a8-8cf0-01663e4ee4ae" />
   >
   > Apply Ingot onto any log
 
-- Dimensional Glass
+- Noctium Composite
   > <img width="252" height="124" alt="Dimensional Glass" src="https://github.com/user-attachments/assets/df1012dd-7b3c-4cd8-8f2f-3d70fc971b04" />
   >
   > Dust, Glass
+
+- Dimensional Gateway
+  > <img width="252" height="124" alt="Dimensional Gateway" src="https://github.com/user-attachments/assets/671cc269-cb85-47db-a88d-cda6ea57f5c1" />
+  >
+  > Ingot, Glass

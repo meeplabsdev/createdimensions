@@ -1,6 +1,7 @@
 package com.createdimensions;
 
 import com.createdimensions.content.registry.*;
+import com.croaklib.ModUpdater;
 import com.google.common.base.Suppliers;
 import dev.architectury.platform.Platform;
 import dev.architectury.registry.registries.Registrar;
@@ -18,6 +19,8 @@ public final class CreateDimensionsMod {
 	private static final Supplier<RegistrarManager> MANAGER = Suppliers.memoize(() -> RegistrarManager.get(MOD_ID));
 
 	public static void onInitialize() {
+		ModUpdater.addMod(MOD_ID);
+
 		ModEffects.register();
 		ModBlocks.register();
 		ModBlockEntities.register();

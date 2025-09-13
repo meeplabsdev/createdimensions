@@ -34,7 +34,9 @@
     "minecraft": "~1.20.1",
     "java": ">=17",
     "architectury": ">=9.2.14",
-    "fabric-api": "*"
+    "fabric-api": "*",
+    "create": "*",
+    "croaklib": ">=1.0.4"
   },
   "suggests": {
   }

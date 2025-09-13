@@ -13,6 +13,8 @@ dependencies {
 
     // Create
     modCompileOnlyApi "com.tterrag.registrate:Registrate:MC1.20-1.3.3"
+
+    modImplementation files('croaklib.jar')
 }
 
 sourceSets {
